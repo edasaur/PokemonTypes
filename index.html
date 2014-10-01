@@ -9,7 +9,10 @@
     </head>
     <body>
         <script type="text/javascript">
-            // Your beautiful D3 code will go here
+            var dataset = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+            d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){
+                return d;
+            });
         </script>
     </body>
 </html>
