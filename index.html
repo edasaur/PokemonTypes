@@ -5,6 +5,7 @@
         <title>
             D3 Basic Test
         </title>
+        <link rel="stylesheet" type="text/css" href="design.css">
         <script type="text/javascript" src="d3/d3.js"></script>
     </head>
     <body>
@@ -13,6 +14,14 @@
             d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){
                 return d;
             });
+            d3.select("body").selectAll("p").style("color", function(d){
+                if (d % 20 == 0) {
+                    return "red";
+                } else {
+                    return "green";
+                }
+            });
+            d3.select("body")
         </script>
     </body>
 </html>
